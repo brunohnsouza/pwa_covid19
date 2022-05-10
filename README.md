@@ -10,6 +10,5 @@
 4. Utilizando os dados dos arquivos disponibilizados, inclui novos recursos e algumas modificações.
 
 ## Resultado:
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f841c2d4-ce5b-4021-b9e7-f7223dba49dd/deploy-status)](https://app.netlify.com/sites/painelcovid19aovivo/deploys)
 ![PWA_COVID19_IMAGE](https://user-images.githubusercontent.com/103577843/167509101-0583e5a2-22bc-4652-88d8-24f860638458.PNG)
 
