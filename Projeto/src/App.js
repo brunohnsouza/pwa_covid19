@@ -3,27 +3,27 @@ import { StylesProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
 import GlobalStyle from './commons/styles/global-style';
 import Main from './containers/Main';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Brightness4, Brightness7 } from '@material-ui/icons';
 import { ContainerStyled } from './containers/Main/style';
 
 function App() {
     const [localTheme, setLocalTheme] = useState(window.localStorage.getItem('theme'));
-    const [darkState, setDarkState] = useState(localTheme == 'dark' ? true : false);
+    const [darkState, setDarkState] = useState(localTheme === 'dark' ? true : false);
     const palletType = darkState ? 'dark' : 'light';
 
-    const darkTheme = createMuiTheme({
+    const darkTheme = createTheme({
         palette: {
             type: localTheme != null ? localTheme : palletType,
             background: {
-                default: localTheme == 'dark' ? '#333' : '#0b85e5',
+                default: localTheme === 'dark' ? '#333' : '#0b85e5',
             }
         },
         typography: {
             useNextVariants: true,
             fontFamily: 'Roboto',
             h4: {
-                color: localTheme == 'dark' ? '#fff' : '#3f51b5',
+                color: localTheme === 'dark' ? '#fff' : '#3f51b5',
                 textAlign: 'center',
                 fontWeight: '900',
                 marginBottom: '5px',
@@ -31,7 +31,7 @@ function App() {
             },
             h6: {
                 textAlign: 'center',
-                color: localTheme == 'dark' ? '#fff' : '#3f51b5',
+                color: localTheme === 'dark' ? '#fff' : '#3f51b5',
                 fontSize: '17px'
             }
         }
@@ -52,7 +52,7 @@ function App() {
                 <GlobalStyle />
                 <ContainerStyled style={{ maxWidth: '1300px', display: 'flex', placeContent: 'flex-end', alignItems: 'flex-end', color: '#fff', cursor: 'pointer' }}>
                     {
-                        localTheme == 'dark'
+                        localTheme === 'dark'
                             ? <Brightness4 fontSize='large' onClick={handleThemeChange} />
                             : <Brightness7 fontSize='large' onClick={handleThemeChange} />
                     }
