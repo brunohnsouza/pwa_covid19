@@ -6,6 +6,11 @@
 - **Dark theme:** using the __*@material-ui/icons*__ package (added manually by Git Bash); 
 - **New countries:** in addition to the countries available in the original project, I added a few more.
 
+### 🔧 TOOLS AND TECHNOLOGIES USED:
+- **NodeJs:** V.12.0;
+- **JavaScript**;
+- **React**.
+
 ### 🧗‍♂️ STEP BY STEP:
 1. I downloaded the files available in the class;
 2. I entered the **root** folder and **yarn** to create the **note_modules** folder;
